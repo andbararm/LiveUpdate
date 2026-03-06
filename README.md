@@ -145,3 +145,16 @@ For the example, preserved.o in the current version output folder was deleted. A
 0x20000014 D Tick
 0x20000018 D Minutes
 ```
+
+
+## Testing the example
+
+- connect the NUCLEO-L476RG to the PC
+- open the project in the v0 folder in Keil Studio
+- build and then flash the project, this is written to flash bank0
+- Open the project in the v1 folder in Keil Studio
+- build and then flash the project, this is written to flash bank1
+- in VSCode open the Serial Monitor and connect it to the STLink USART
+- reset the board an you should see seconds printed out
+- press the User Buuton on the board, this will trigger the switch
+- v1 prints minutes as well while seconds value was preserved
